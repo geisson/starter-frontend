@@ -7,7 +7,8 @@
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --mode=production",
     "github-page": "git subtree push --prefix dist origin gh-pages",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,9 @@
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "babel-loader": "^8.2.3",
+    "commitizen": "^4.2.4",
     "css-loader": "^6.6.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.8.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
@@ -37,6 +40,10 @@
   },
   "dependencies": {
     "webpack-merge": "^5.8.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
-
 }
