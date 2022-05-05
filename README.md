@@ -19,7 +19,7 @@ Base para projetos font-end em typescript
 - <code> yarn prepare </code>
 
 ### Scripts
-- Pra você começar a ver no navegado o que esta codando: <code> yarn start </code>
+- Pra você começar a ver no navegador o que esta codando: <code> yarn start </code>
 - Pra você buildar o projeto: <code> yarn build </code>
 - Pra você publicar seu projeto no github pages: <code> github-page </code>
 - Pra você fazer o commit com todo o poder: <code> yarn commit </code> ao invés  de <code> git commit -m 'message' </code>
