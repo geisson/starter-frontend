@@ -8,7 +8,7 @@ const handleClick = (event:Event):void => {
 
   const inputValue = inputName.value;
 
-  console.log(`Ola mundo ${inputValue}`);
+  console.log(`Ola mundo ${inputValue}!`);
   console.log(this);
   console.log(event);
 };
