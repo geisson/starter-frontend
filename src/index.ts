@@ -4,7 +4,7 @@ import '../index.html';
 const inputName = document.querySelector('[data-teste="nome"]') as HTMLInputElement;
 const btn = document.querySelector('[data-teste="btn"]') as HTMLButtonElement;
 
-const handleClick = (event:Event):void => {
+const handleClick = (event: Event): void => {
   event.preventDefault();
 
   const inputValue = inputName.value;
@@ -13,5 +13,7 @@ const handleClick = (event:Event):void => {
   console.log(this);
   console.log(event);
 };
+
+console.log('OLA MUNDO!');
 
 btn?.addEventListener('click', handleClick);
