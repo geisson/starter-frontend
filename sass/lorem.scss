@@ -1,0 +1,152 @@
+@import url('reset.scss');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+$color-primary: #ff5959;
+$color-secondary: #676fa3;
+$color-tertiary: #cddeff;
+$color-quaternary: #eef2ff;
+
+$padding-base: 1rem;
+$margin-base: 1rem;
+
+$font-size: 16px;
+$font-family: 'Share Tech Mono';
+
+$border-radius: 1rem;
+
+@mixin button($font_family, $padding, $color) {
+  .button {
+    background-color: $color;
+    border: 1px solid $color;
+    color: darken($color: $color, $amount: 40);
+    font-family: $font_family;
+    font-weight: bolder;
+
+    padding: $padding;
+
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: lighten($color: $color, $amount: 10);
+      border: 1px solid lighten($color: $color, $amount: 10);
+    }
+
+    &:active {
+      background-color: darken($color: $color, $amount: 5);
+      border: 1px solid darken($color: $color, $amount: 5);
+    }
+
+    &.equal {
+      background-color: darken($color: $color, $amount: 20);
+      border: 1px solid darken($color: $color, $amount: 20);
+      color: lighten($color: $color, $amount: 10);
+
+      &:hover {
+        background-color: darken($color: $color, $amount: 30);
+        border: 1px solid darken($color: $color, $amount: 30);
+      }
+
+      &:active {
+        background-color: darken($color: $color, $amount: 10);
+        border: 1px solid darken($color: $color, $amount: 10);
+        color: lighten($color: $color, $amount: 20);
+      }
+    }
+  }
+}
+
+@mixin grid-btn($repeat) {
+  display: grid;
+  grid-template-columns: repeat($repeat, 1fr);
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+.container {
+  align-items: center;
+  background: $color-tertiary;
+
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.content {
+  background-color: $color-quaternary;
+  max-width: 400px;
+  padding: calc($padding-base * 2);
+}
+
+.container-visor {
+  background-color: $color-tertiary;
+  border: 0;
+
+  font-family: $font-family;
+  font-weight: bolder;
+  padding: $padding-base;
+  text-align: right;
+
+  .visor-current-number {
+    color: darken($color: $color-tertiary, $amount: 50);
+    font-size: calc($font-size * 2.5);
+    height: calc($font-size * 2.5);
+  }
+
+  .visor-accumulator {
+    color: darken($color: $color-tertiary, $amount: 20);
+    font-size: calc($font-size * 0.75);
+    height: calc($font-size * 0.75);
+    padding-bottom: calc($padding-base);
+  }
+}
+
+.container-keyboard {
+  display: grid;
+  grid-template-areas:
+    'k_functionality k_operators'
+    'k_numbers k_operators';
+}
+
+.keyboard-numbers {
+  @include grid-btn(3);
+  @include button($font-family, $padding-base, $color-primary);
+  grid-area: k_numbers;
+}
+
+.keyboard-operators {
+  @include grid-btn(1);
+  @include button($font-family, $padding-base, $color-secondary);
+  grid-area: k_operators;
+}
+
+.keyboard-functionality {
+  @include grid-btn(3);
+  @include button($font-family, $padding-base, $color-secondary);
+  grid-area: k_functionality;
+}
+
+$mobile: 450px;
+
+@function em($size, $base-font: 16px) {
+  @return $size * 1em / $base-font;
+}
+
+%absctract-div {
+  display: block;
+}
+
+div {
+  @extend %abstract-div;
+
+  background-image: url('https://placehold.it/400x200');
+  padding: em($size: 5px);
+
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+}
