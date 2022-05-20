@@ -22,9 +22,14 @@
   padding: 40px;
 
   p {
-    border: 1px solid hsl(var(--accent) / 90%));
     border-radius: 2px;
     font: 400 1rem/1.5 system-ui;
     margin-block: 2rem;
   }
+}
+
+.a,
+.b {
+  color: #111;
+  display: inline-block;
 }
