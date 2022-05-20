@@ -15,7 +15,16 @@
 
 .content {
   background-color: #fcfff7;
-  height: 300px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  height: 400px;
   max-width: 400px;
-  padding: 50px;
+  padding: 40px;
+
+  p {
+    border: 1px solid hsl(var(--accent) / 90%));
+    border-radius: 2px;
+    font: 400 1rem/1.5 system-ui;
+    margin-block: 2rem;
+  }
 }

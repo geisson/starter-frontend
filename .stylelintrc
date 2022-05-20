@@ -1,8 +1,8 @@
 {
   "extends": ["stylelint-config-sass-guidelines", "stylelint-8-point-grid"],
-  "plugins": ["stylelint-a11y"],
+  "plugins": ["stylelint-a11y", "@signal-noise/stylelint-scales"],
   "rules": {
-    "max-nesting-depth": 2,
+    "max-nesting-depth": 3,
     "a11y/font-size-is-readable": true,
     "a11y/content-property-no-static-value": true,
     "a11y/media-prefers-reduced-motion": true,
@@ -11,6 +11,18 @@
     "a11y/no-obsolete-element": true,
     "a11y/no-spread-text": true,
     "a11y/no-text-align-justify": true,
-    "a11y/selector-pseudo-class-focus": true
+    "a11y/selector-pseudo-class-focus": true,
+
+    "scales/alpha-values": [80, 90],
+    "scales/border-widths": [{ "scale": [1, 2], "units": ["px"] }],
+    "scales/font-families": ["system-ui"],
+    "scales/font-sizes": [
+      { "scale": [1, 1.5, 2], "units": ["em", "rem"] },
+      { "scale": [12, 14, 16], "units": ["px"] }
+    ],
+    "scales/font-weights": [400, 600],
+    "scales/line-heights": [1, 1.5],
+    "scales/radii": [{ "scale": [2, 4], "units": ["px"] }],
+    "scales/space": [{ "scale": [0.5, 1, 2, 4], "units": ["rem"] }]
   }
 }

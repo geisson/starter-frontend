@@ -6,10 +6,10 @@ $color-secondary: #676fa3;
 $color-tertiary: #cddeff;
 $color-quaternary: #eef2ff;
 
-$padding-base: 1rem;
+$padding-base: 2rem;
 $margin-base: 1rem;
 
-$font-size: 16px;
+$font-size: 15px;
 $font-family: 'Share Tech Mono';
 
 $border-radius: 1rem;
@@ -197,12 +197,13 @@ div {
 .foo {
   color: hsl(0, 100%, 50%);
   font-size: 15px;
-  margin-top: 5px;
-  text-align: justify;
+  margin-top: 16px;
+  text-align: center;
 }
 
 @media screen and (max-width: 480px) {
   .foo {
     color: #00f;
+    text-align: center;
   }
 }
