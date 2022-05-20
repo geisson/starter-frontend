@@ -15,6 +15,48 @@ $font-family: 'Share Tech Mono';
 $border-radius: 1rem;
 
 @mixin button($font_family, $padding, $color) {
+  @media screen and (prefers-reduced-motion: reduce) {
+    .button {
+      background-color: $color;
+      border: 1px solid $color;
+      color: darken($color: $color, $amount: 40);
+      font-family: $font_family;
+      font-weight: bolder;
+      margin: 8px;
+      padding: $padding;
+      transition: none;
+
+      &:hover,
+      &:focus {
+        background-color: lighten($color: $color, $amount: 10);
+        border: 1px solid lighten($color: $color, $amount: 10);
+      }
+
+      &:active {
+        background-color: darken($color: $color, $amount: 5);
+        border: 1px solid darken($color: $color, $amount: 5);
+      }
+
+      &.equal {
+        background-color: darken($color: $color, $amount: 20);
+        border: 1px solid darken($color: $color, $amount: 20);
+        color: lighten($color: $color, $amount: 10);
+
+        &:hover,
+        &:focus {
+          background-color: darken($color: $color, $amount: 30);
+          border: 1px solid darken($color: $color, $amount: 30);
+        }
+
+        &:active {
+          background-color: darken($color: $color, $amount: 10);
+          border: 1px solid darken($color: $color, $amount: 10);
+          color: lighten($color: $color, $amount: 20);
+        }
+      }
+    }
+  }
+
   .button {
     background-color: $color;
     border: 1px solid $color;
@@ -25,7 +67,8 @@ $border-radius: 1rem;
     padding: $padding;
     transition: all 0.4s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: lighten($color: $color, $amount: 10);
       border: 1px solid lighten($color: $color, $amount: 10);
     }
@@ -40,7 +83,8 @@ $border-radius: 1rem;
       border: 1px solid darken($color: $color, $amount: 20);
       color: lighten($color: $color, $amount: 10);
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: darken($color: $color, $amount: 30);
         border: 1px solid darken($color: $color, $amount: 30);
       }
@@ -147,5 +191,18 @@ div {
 
   @media screen and (min-width: $mobile) {
     display: none;
+  }
+}
+
+.foo {
+  color: hsl(0, 100%, 50%);
+  font-size: 15px;
+  margin-top: 5px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 480px) {
+  .foo {
+    color: #00f;
   }
 }
