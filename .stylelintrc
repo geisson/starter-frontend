@@ -1,7 +1,8 @@
 {
   "extends": ["stylelint-config-sass-guidelines", "stylelint-8-point-grid"],
-  "plugins": ["stylelint-a11y", "@signal-noise/stylelint-scales"],
+  "plugins": ["stylelint-a11y", "@signal-noise/stylelint-scales", "stylelint-declaration-block-no-ignored-properties"],
   "rules": {
+    "plugin/declaration-block-no-ignored-properties": true,
     "max-nesting-depth": 3,
     "a11y/font-size-is-readable": true,
     "a11y/content-property-no-static-value": true,

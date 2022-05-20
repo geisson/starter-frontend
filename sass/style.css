@@ -3,3 +3,8 @@
   color: #f00;
   font-size: 16px;
 }
+
+a {
+  display: inline;
+  width: 100px;
+}
