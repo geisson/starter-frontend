@@ -6,7 +6,8 @@
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-group-selectors",
     "stylelint-selector-no-empty",
-    "stylelint-sass-render-errors"
+    "stylelint-sass-render-errors",
+    "stylelint-z-index-value-constraint"
   ],
   "rules": {
     "plugin/declaration-block-no-ignored-properties": true,
@@ -14,6 +15,10 @@
     "plugin/stylelint-selector-no-empty": true,
     "max-nesting-depth": 3,
     "plugin/sass-render-errors": true,
+    "plugin/z-index-value-constraint": {
+      "min": 1,
+      "max": 10
+    },
 
     "a11y/font-size-is-readable": true,
     "a11y/content-property-no-static-value": true,
