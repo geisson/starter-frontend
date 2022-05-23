@@ -5,13 +5,16 @@
     "@signal-noise/stylelint-scales",
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-group-selectors",
-    "stylelint-selector-no-empty"
+    "stylelint-selector-no-empty",
+    "stylelint-sass-render-errors"
   ],
   "rules": {
     "plugin/declaration-block-no-ignored-properties": true,
     "plugin/stylelint-group-selectors": true,
     "plugin/stylelint-selector-no-empty": true,
     "max-nesting-depth": 3,
+    "plugin/sass-render-errors": true,
+
     "a11y/font-size-is-readable": true,
     "a11y/content-property-no-static-value": true,
     "a11y/media-prefers-reduced-motion": true,
@@ -24,10 +27,10 @@
 
     "scales/alpha-values": [80, 90],
     "scales/border-widths": [{ "scale": [1, 2], "units": ["px"] }],
-    "scales/font-families": ["system-ui"],
+    "scales/font-families": ["system-ui", "Open Sans", "Noto Serif"],
     "scales/font-sizes": [
       { "scale": [1, 1.5, 2], "units": ["em", "rem"] },
-      { "scale": [12, 14, 16], "units": ["px"] }
+      { "scale": [16, 18, 20], "units": ["px"] }
     ],
     "scales/font-weights": [400, 600],
     "scales/line-heights": [1, 1.5],

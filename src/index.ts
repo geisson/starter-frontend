@@ -12,6 +12,4 @@ const handleClick = (event: Event): void => {
   console.log(`Ola mundo ${inputValue}!!!!!`);
 };
 
-console.log('ola mundo! Funciona!');
-
-btn?.addEventListener('click', handleClick);
+btn.addEventListener('click', handleClick);
