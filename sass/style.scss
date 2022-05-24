@@ -18,8 +18,7 @@ body {
 .container {
   align-items: center;
   background: $color-primary;
-  background-color: rgb(255, 192, 203);
-  background-color: rgb(255, 192, 203);
+  background-color: $color-primary;
 
   display: flex;
   flex-direction: row;
@@ -29,9 +28,12 @@ body {
 }
 
 .content {
-  background-color: color-secondary;
+  background-color: $color-secondary;
+
   font-weight: 400;
+
   max-width: 400px;
+
   padding: 40px;
 }
 
@@ -41,6 +43,7 @@ body {
   padding: 1rem 0;
 
   + .divider {
+    margin-block: 4rem;
     margin-top: 0;
   }
 }
@@ -54,6 +57,7 @@ body {
 }
 
 .input-text {
-  background: #f00;
-  display: inline;
+  background: rgb(255, 0, 0);
+
+  box-shadow: 0 0 0 1px rgb(171, 184, 197), 0 0 2px 1px rgba(30, 140, 190, 0.8);
 }
