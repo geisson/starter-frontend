@@ -9,26 +9,26 @@ $color-tertiary: rgb(54 174 124);
 $color-quaternary: rgb(54 174 124);
 
 body {
-  font-size: 16px;
   color: #fff;
+  font-size: 16px;
 }
 
 .container {
-  align-items: center;
+  display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
   background: $color-primary;
   background-color: rgb(255 192 203);
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  width: 100vw;
 }
 
 .content {
-  background-color: color-secondary;
-  font-weight: 400;
   max-width: 400px;
   padding: 40px;
+  background-color: color-secondary;
+  font-weight: 400;
 }
 
 .divider {
@@ -36,8 +36,8 @@ body {
 }
 
 .title {
-  font-size: 2rem;
   padding: 1rem 0;
+  font-size: 2rem;
 
   + .divider {
     margin-top: 0;
@@ -53,6 +53,7 @@ a {
 }
 
 .input-text {
-  background: #f00;
   display: inline;
+  width: 90px;
+  background: #f00;
 }
