@@ -1,6 +1,6 @@
 {
   "extends": ["stylelint-config-standard-scss"],
-  "plugins": ["stylelint-order"],
+  "plugins": ["stylelint-order", "stylelint-declaration-block-no-ignored-properties"],
   "defaultSeverity": "warning",
   "rules": {
     "at-rule-no-unknown": true,
@@ -455,6 +455,8 @@
       {
         "unspecified": "bottom"
       }
-    ]
+    ],
+
+    "plugin/declaration-block-no-ignored-properties": true
   }
 }
