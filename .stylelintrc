@@ -1,6 +1,6 @@
 {
   "extends": ["stylelint-config-standard-scss"],
-  "plugins": ["stylelint-order", "stylelint-declaration-block-no-ignored-properties"],
+  "plugins": ["stylelint-order", "stylelint-declaration-block-no-ignored-properties", "stylelint-group-selectors"],
   "defaultSeverity": "warning",
   "rules": {
     "at-rule-no-unknown": true,
@@ -457,6 +457,7 @@
       }
     ],
 
-    "plugin/declaration-block-no-ignored-properties": true
+    "plugin/declaration-block-no-ignored-properties": true,
+    "plugin/stylelint-group-selectors": true
   }
 }

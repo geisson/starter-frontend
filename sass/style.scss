@@ -31,6 +31,12 @@ body {
   font-weight: 400;
 }
 
+.a,
+.b {
+  display: inline-block;
+  width: 100px;
+}
+
 .divider {
   margin: 1rem 0;
 }
