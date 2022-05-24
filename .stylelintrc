@@ -1,6 +1,11 @@
 {
   "extends": ["stylelint-config-standard-scss"],
-  "plugins": ["stylelint-order", "stylelint-declaration-block-no-ignored-properties", "stylelint-group-selectors"],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-8-point-grid",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-group-selectors"
+  ],
   "defaultSeverity": "warning",
   "rules": {
     "at-rule-no-unknown": true,
@@ -458,6 +463,11 @@
     ],
 
     "plugin/declaration-block-no-ignored-properties": true,
-    "plugin/stylelint-group-selectors": true
+    "plugin/stylelint-group-selectors": true,
+    "plugin/8-point-grid": {
+      "base": 4,
+      "allowlist": ["2px", "1px", "0.0625rem"],
+      "ignorelist": []
+    }
   }
 }
