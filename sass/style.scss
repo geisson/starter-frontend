@@ -1,16 +1,22 @@
+@use 'sass:color';
+
 @import url('reset.scss');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 $font-family-title: 'Noto Serif', serif;
 $font-family: 'Open Sans', sans-serif;
-$color-primary: rgb(235 84 84);
-$color-secondary: rgb(249 217 35);
-$color-tertiary: rgb(54 174 124);
-$color-quaternary: rgb(54 174 124);
+$font-size: 16px;
+$color-primary: rgb(154 134 164);
+$color-secondary: rgb(177 188 230);
+$color-tertiary: rgb(183 229 221);
+$color-quaternary: rgb(241 240 192);
+$color-darken: #333;
+$color-bright: #f0f0f0;
 
 body {
   color: #fff;
-  font-size: 16px;
+  font-family: $font-family;
+  font-size: $font-size;
 }
 
 .container {
@@ -21,37 +27,31 @@ body {
   width: 100vw;
   height: 100vh;
   background: $color-primary;
-  background-color: rgb(255 192 203);
 }
 
 .content {
   max-width: 400px;
   padding: 40px;
-  background-color: color-secondary;
+  background: $color-secondary;
+  border-radius: 3px;
   font-weight: 400;
-}
-
-.a,
-.b {
-  display: inline-block;
-  width: 100px;
 }
 
 .divider {
   margin: 1rem 0;
+  border: 1px solid $color-primary;
 }
 
 .title {
   padding: 1rem 0;
+  color: color.scale($color: #036, $lightness: 90%);
+  font-family: $font-family-title;
   font-size: 2rem;
+  font-weight: 900;
 
   + .divider {
     margin-top: 0;
   }
-}
-
-a {
-  top: calc(1px + 2px);
 }
 
 .paragraph {
