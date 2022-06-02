@@ -21,21 +21,32 @@ O objetivo do starter é fornecer uma base completa e configurada para o desenvo
 ## Instalação
 
 - <code> yarn install </code>
+
   Instala as dependências do projeto.
+
 - <code> yarn prepare </code>
+
   Instala e configura o husk.
 
 ## Comandos
 
 - <code> yarn start </code>
+
   Inicia o servidor do Webpack e abre o projeto no navegador.
+
 - <code> yarn build </code>
-  Cria a versão de distribuição do projeto, em /dist. Os arquivos são gerados no modo de produção.
+
+  Cria a versão de distribuição do projeto, em /dist.
+  Os arquivos são gerados no modo de produção.
+
 - <code> yarn github-page </code>
-  Se o github estiver configurado no projeto, publica /dist no Github Pages automaticamente.
+
+  Cria e envia para o github a branch __github-page__, preparada para se publicar no Github Pages.
+
 - <code> yarn commit </code>
-Para usar o CommitLint.
-Use esse comando ao invés de <code> git commit -m 'message'</code>.
+
+  Para usar o CommitLint.
+  Use esse comando ao invés de <code> git commit -m 'message'</code>.
 
 ## Configurações
 
