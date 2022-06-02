@@ -1,27 +1,77 @@
 # Starter Front-End
-Base para projetos font-end em typescript
+O objetivo do starter é fornecer uma base completa e configurada para o desenvolvimento de códigos legíveis e consistentes
 
-## Tecnologias
+## Linguagens suportadas
+
 - Typescript
 - Sass
-- WebPack
-- Eslint
-- HtmlLint
-- Commitlint
-- Husky
-- Commitizen
+- CSS
+- HTML
 
-## Como usar
+## Lints e empacotadores
 
-### iniciar
+- [Eslint](https://eslint.org/)
+- [StyleLint](https://stylelint.io/)
+- [HTMLHint](https://htmlhint.com/)
+- [CommitLint](https://github.com/conventional-changelog/commitlint)
+- [Commitizen](https://commitizen-tools.github.io/commitizen/)
+- [Husky](https://typicode.github.io/husky/#/)
+- [WebPack](https://webpack.js.org/)
+
+## Instalação
 
 - <code> yarn install </code>
+  Instala as dependências do projeto.
 - <code> yarn prepare </code>
+  Instala e configura o husk.
 
-### Scripts
-- Pra você começar a ver no navegador o que esta codando: <code> yarn start </code>
-- Pra você buildar o projeto: <code> yarn build </code>
-- Pra você publicar seu projeto no github pages: <code> github-page </code>
-- Pra você fazer o commit com todo o poder: <code> yarn commit </code> ao invés  de <code> git commit -m 'message' </code>
+## Comandos
+
+- <code> yarn start </code>
+  Inicia o servidor do Webpack e abre o projeto no navegador.
+- <code> yarn build </code>
+  Cria a versão de distribuição do projeto, em /dist. Os arquivos são gerados no modo de produção.
+- <code> yarn github-page </code>
+  Se o github estiver configurado no projeto, publica /dist no Github Pages automaticamente.
+- <code> yarn commit </code>
+Para usar o CommitLint.
+Use esse comando ao invés de <code> git commit -m 'message'</code>.
+
+## Configurações
+
+### Stylelint
+Lint do Css e Scss.
+Aquivo de configuração: **.stylelintrc**
+
+### Htmlhint
+Lint do HTML.
+Arquivo de configuração: **.htmlhintrc**
+
+### Eslint
+Lint JavaScript e Typescript.
+Arquivo de configuração: **.estlintrc.json**
+
+### Commitlint
+Lint commits.
+Arquivo de configuração: **commitlint.config.js**
+
+### Webpack
+Empacotador do projeto.
+Arquivo de configuração: **webpack.config.js**
+
+## Extensões para VScode
+
+- [VS Code - ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [VS Code - Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [VS Code - HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint)
+- [VS Code - Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+__Importante__: configure corretamente cada extensão.
+
+---
+
+Desenvolvimento: [Geisson Iuri](mailto:geissoniuri@gmail.com) | [Repositório do projeto](https://github.com/geisson/starter-frontend)
+
+
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
