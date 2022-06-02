@@ -1,63 +1,132 @@
+@use 'sass:color';
+
 @import url('reset.scss');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+$font-size-base: 16;
 $font-family-title: 'Noto Serif', serif;
 $font-family: 'Open Sans', sans-serif;
+$font-mono: 'Roboto Mono', monospace;
+$font-size: $font-size-base + px;
+$color-primary: #293462;
+$color-secondary: #f24c4c;
+$color-tertiary: #ec9b3b;
+$color-quaternary: #f7d716;
+$color-darken: #333;
+$color-bright: #f0f0f0;
+$color-link: $color-quaternary;
 
-$color-primary: rgb(235, 84, 84);
-$color-secondary: rgb(249, 217, 35);
-$color-tertiary: rgb(54, 174, 124);
-$color-quaternary: rgb(54, 174, 124);
+@function toRem( $value ) {
+
+  $remValue: calc($value / $font-size-base) + rem;
+
+  @return $remValue;
+}
 
 body {
-  font-family: 'Open Sans';
-  font-size: 16px;
+  color: #fff;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: 1.5rem;
+}
+
+a {
+  color: $color-link;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover { color: color.scale($color: $color-link, $lightness: 25%,); }
+}
+
+em {
+  font-weight: 600;
+  font-style: italic;
 }
 
 .container {
-  align-items: center;
-  background: $color-primary;
-  background-color: $color-primary;
-
   display: flex;
   flex-direction: row;
-  height: 100vh;
   justify-content: center;
-  width: 100vw;
+  align-items: center;
+  background: $color-primary;
 }
 
 .content {
-  background-color: $color-secondary;
-
+  max-width: 37.5rem;
+  margin: 2.5rem 0;
+  padding: 2.5rem;
+  background: $color-secondary;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 1rem rgba(0, 0, 0, 25%);
   font-weight: 400;
-
-  max-width: 400px;
-
-  padding: 40px;
-}
-
-.title {
-  font-family: 'Noto Serif';
-  font-size: 2rem;
-  padding: 1rem 0;
-
-  + .divider {
-    margin-block: 4rem;
-    margin-top: 0;
-  }
-}
-
-.paragraph {
-  line-height: 1.5rem;
 }
 
 .divider {
   margin: 1rem 0;
+  margin-top: 2rem;
+  border: toRem(1) solid $color-primary;
 }
 
-.input-text {
-  background: rgb(255, 0, 0);
+.title {
+  &,
+  &-2 {
+    padding: 1rem 0;
+    color: $color-primary;
+    font-family: $font-family-title;
+    font-weight: 900;
+  }
 
-  box-shadow: 0 0 0 1px rgb(171, 184, 197), 0 0 2px 1px rgba(30, 140, 190, 0.8);
+  &-2 { font-size: 1.5rem; }
+
+  &-3 {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  font-size: 2rem;
+}
+
+.list {
+  &-disc {
+    list-style-type: disc;
+
+    li { padding: 0.25rem 0; }
+  }
+
+  &-none {
+    list-style: none;
+
+    li { padding: 1rem 0; }
+  }
+
+  &-none,
+  &-disc {
+    list-style-position: inside;
+
+    li {
+      &:first-child { padding-top: 0; }
+      &:last-child { padding-bottom: 0; }
+    }
+  }
+}
+
+.code {
+  &-primary { background: rgba(0, 0, 0, 25%); }
+  &-secondary { background: rgba(0, 0, 0, 10%); }
+
+  &-primary,
+  &-secondary {
+    display: inline-block;
+    padding: toRem(4) toRem(8);
+    border-radius: toRem(4);
+    font-family: $font-mono;
+  }
+}
+
+.warning {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 10%);
+  border-radius: toRem(4);
 }
