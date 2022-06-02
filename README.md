@@ -75,8 +75,8 @@ __Importante__: configure corretamente cada extensão.
 
 ---
 
-Desenvolvimento: [Geisson Iuri](mailto:geissoniuri@gmail.com) | [Repositório do projeto](https://github.com/geisson/starter-frontend)
+### Desenvolvimento: [Geisson Iuri](mailto:geissoniuri@gmail.com)  |  [Página do projeto](https://geisson.github.io/starter-frontend/)
 
-
+___
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
