@@ -20,54 +20,48 @@ O objetivo do starter é fornecer uma base completa e configurada para o desenvo
 
 ## Instalação
 
-- <code> yarn install </code>
+<code> yarn install </code> <br>
+Instala as dependências do projeto
 
-  Instala as dependências do projeto.
-
-- <code> yarn prepare </code>
-
-  Instala e configura o husk.
+<code> yarn prepare </code> <br>
+Instala e configura o husk.
 
 ## Comandos
 
-- <code> yarn start </code>
+<code> yarn start </code> <br>
+Inicia o servidor do Webpack e abre o projeto no navegador.
 
-  Inicia o servidor do Webpack e abre o projeto no navegador.
+<code> yarn build </code> <br>
+Cria a versão de distribuição do projeto, em /dist. <br>
+Os arquivos são gerados no modo de produção.
 
-- <code> yarn build </code>
+<code> yarn github-page </code> <br>
+Cria e envia para o github a branch __github-page__, preparada para se publicar no Github Pages.
 
-  Cria a versão de distribuição do projeto, em /dist.
-  Os arquivos são gerados no modo de produção.
-
-- <code> yarn github-page </code>
-
-  Cria e envia para o github a branch __github-page__, preparada para se publicar no Github Pages.
-
-- <code> yarn commit </code>
-
-  Para usar o CommitLint.
-  Use esse comando ao invés de <code> git commit -m 'message'</code>.
+<code> yarn commit </code> <br>
+Para usar o CommitLint. <br>
+Use esse comando ao invés de <code> git commit -m 'message'</code>.
 
 ## Configurações
 
 ### Stylelint
-Lint do Css e Scss.
+Lint do Css e Scss.<br>
 Aquivo de configuração: **.stylelintrc**
 
 ### Htmlhint
-Lint do HTML.
+Lint do HTML. <br>
 Arquivo de configuração: **.htmlhintrc**
 
 ### Eslint
-Lint JavaScript e Typescript.
+Lint JavaScript e Typescript. <br>
 Arquivo de configuração: **.estlintrc.json**
 
 ### Commitlint
-Lint commits.
+Lint commits. <br>
 Arquivo de configuração: **commitlint.config.js**
 
 ### Webpack
-Empacotador do projeto.
+Empacotador do projeto. <br>
 Arquivo de configuração: **webpack.config.js**
 
 ## Extensões para VScode
