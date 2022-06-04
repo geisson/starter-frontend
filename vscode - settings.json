@@ -1,0 +1,235 @@
+{
+  ////// REGRAS DO EDITOR //////
+  // editor
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 11,
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "500",
+  "editor.lineHeight": 2,
+  "editor.letterSpacing": 1,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.rulers": [80, 120],
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.dragAndDrop": true,
+  "editor.renderLineHighlight": "gutter",
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "editor.wrappingIndent": "same",
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.minimap.maxColumn": 120,
+  "editor.occurrencesHighlight": true,
+  "editor.scrollBeyondLastLine": true,
+  "editor.showUnused": true,
+  "editor.parameterHints.enabled": false,
+  "editor.linkedEditing": true,
+  "editor.renderControlCharacters": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.guides.highlightActiveIndentation": "always",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.quickSuggestions": true,
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.rename.enablePreview": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
+  // workbench
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.tabSizing": "fit",
+  "workbench.editorAssociations": { "*.md": "vscode.markdown.preview.editor" },
+  "workbench.layoutControl.enabled": true,
+  "workbench.startupEditor": "newUntitledFile",
+  // html
+  "html.format.indentInnerHtml": false,
+  "html.format.wrapAttributes": "auto",
+  "html.autoClosingTags": true,
+  "html.suggest.html5": true,
+  "html.validate.scripts": true,
+  "html.validate.styles": true,
+  "html.completion.attributeDefaultValue": "doublequotes",
+  "html.autoCreateQuotes": true,
+  "html.format.wrapLineLength": 120,
+  // javascript
+  "javascript.inlayHints.parameterNames.enabled": "none",
+  "javascript.inlayHints.variableTypes.enabled": false,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "javascript.inlayHints.parameterTypes.enabled": false,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "javascript.preferences.jsxAttributeCompletionStyle": "auto",
+  // typescript
+  "typescript.inlayHints.parameterNames.enabled": "none",
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "typescript.inlayHints.parameterTypes.enabled": false,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.autoImports": true,
+  "typescript.preferences.jsxAttributeCompletionStyle": "auto",
+  "typescript.suggest.completeFunctionCalls": true,
+  // explorer
+  "explorer.sortOrder": "type",
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  // files
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "files.refactoring.autoSave": true,
+  // terminal
+  "terminal.integrated.tabs.title": "${process}",
+  "terminal.integrated.tabs.description": "${task}${separator}${local}${separator}${cwdFolder}",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.rightClickBehavior": "default",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  // emmet
+  "emmet.syntaxProfiles": { "javascript": "jsx" },
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+  //validates
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  // git
+  "git.autofetch": true,
+  // debbug
+  "debug.terminal.clearBeforeReusing": true,
+  // security
+  "security.workspace.trust.untrustedFiles": "open",
+  // scm
+  "scm.diffDecorationsGutterPattern": {
+    "added": true,
+    "modified": true
+  },
+  // files associations
+  "files.associations": {
+    "*.env.development": "env",
+    "*.env.production": "env",
+    "*.env.local": "env"
+  },
+  // outros
+  "extensions.ignoreRecommendations": true,
+  "breadcrumbs.enabled": true,
+  ////// THEMES AND APPEARANCE //////
+  // theme
+  "workbench.colorTheme": "OM Theme (Night Owl Italic)",
+  // material icon
+  "material-icon-theme.folders.associations": {
+    "methods": "functions",
+    "infra": "app",
+    "entities": "class",
+    "schemas": "class",
+    "typeorm": "database",
+    "repositories": "content",
+    "http": "container",
+    "migrations": "tools",
+    "modules": "components",
+    "implementations": "core",
+    "dtos": "typescript",
+    "fakes": "mock"
+  },
+  "material-icon-theme.files.associations": {
+    "tsconfig.json": "tune",
+    "appsettings.json": "tune",
+    "ormconfig.json": "database"
+  },
+  ////// CODE SPELL //////
+  "cSpell.language": "en,pt,pt_BR",
+  "cSpell.userWords": [
+    "commitlint",
+    "htmlhint",
+    "Pêra",
+    "Pokedex",
+    "pokemons",
+    "resetar",
+    "typeorm",
+    "varchar"
+  ],
+  ////// LIVE SERVER //////
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.CustomBrowser": "microsoft-edge",
+  ////// CODE RUNNER //////
+  "code-runner.clearPreviousOutput": true,
+  ////// HTML HINT //////
+  "htmlhint.documentSelector": ["html"],
+  ///// COLORIZE /////
+  "colorize.languages": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "json",
+    "html",
+    "css"
+  ],
+  ///// CSS MODULES /////
+  "cssModules.camelCase": true,
+  ///// PRETTIER /////
+  "prettier.enable": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 120,
+  "prettier.endOfLine": "lf",
+  // // --
+  // "prettier.arrowParens": "always",
+  // "prettier.bracketSpacing": true,
+  // "prettier.htmlWhitespaceSensitivity": "strict",
+  // "prettier.insertPragma": true,
+  // "prettier.proseWrap": "always",
+  // "prettier.quoteProps": "as-needed",
+  // "prettier.requirePragma": true,
+  // "prettier.semi": true,
+  // "prettier.tabWidth": 2,
+  // "prettier.trailingComma": "all",
+  // "prettier.useTabs": false,
+  // "prettier.vueIndentScriptAndStyle": true,
+  // "prettier.embeddedLanguageFormatting": "auto",
+  ///// SONARLINT /////
+  "sonarlint.ls.javaHome": "c:\\Users\\geiss\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre",
+  /////// STYLELINT /////
+  "stylelint.enable": true,
+  "stylelint.packageManager": "yarn",
+  "stylelint.snippet": ["css", "less", "postcss", "scss"],
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  /////// BEM HELPER /////
+  "bemHelper.classNameCase": "kebab",
+  "bemHelper.responsiveLinting": true,
+  "bemHelper.showDepthWarnings": true,
+  "bemHelper.elementSeparator": "__",
+  "bemHelper.modifierSeparator": "--",
+  "bemHelper.sortGeneratedStylesheets": false,
+  "bemHelper.maxWarningsCount": 100,
+  "bemHelper.ignoreClassNames": [],
+  "bemHelper.blockSelectionMode": "explicit-only",
+  "bemHelper.newLineAfterInsert": true,
+  /////////////////////
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
