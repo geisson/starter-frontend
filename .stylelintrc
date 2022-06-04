@@ -32,7 +32,10 @@
     "keyframe-declaration-no-important": true,
     "media-feature-name-no-unknown": true,
     "named-grid-areas-no-invalid": true,
-    "no-descending-specificity":[ true, {"ignore": ["selectors-within-list"]}],
+    "no-descending-specificity": [
+      true,
+      { "ignore": ["selectors-within-list"] }
+    ],
     "no-duplicate-at-import-rules": true,
     "no-duplicate-selectors": true,
     "no-empty-source": true,
@@ -131,9 +134,17 @@
     "function-comma-space-after": "always-single-line",
     "function-comma-space-before": "never",
     "function-max-empty-lines": 0,
-    "function-name-case": ["lower", {
-      "ignoreFunctions": ["/regex-as-string/", "/^get.*$/", "/^to.*$/", "non-regex"]
-    }],
+    "function-name-case": [
+      "lower",
+      {
+        "ignoreFunctions": [
+          "/regex-as-string/",
+          "/^get.*$/",
+          "/^to.*$/",
+          "non-regex"
+        ]
+      }
+    ],
     "function-parentheses-newline-inside": "always-multi-line",
     "function-parentheses-space-inside": "never-single-line",
     "function-url-quotes": "always",

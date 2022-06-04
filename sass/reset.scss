@@ -104,18 +104,12 @@ header,
 hgroup,
 menu,
 nav,
-section {
-  display: block;
-}
+section { display: block; }
 
-body {
-  line-height: 1;
-}
+body { line-height: 1; }
 
 ol,
-ul {
-  list-style: none;
-}
+ul { list-style: none; }
 
 blockquote,
 q {
@@ -133,6 +127,4 @@ table {
   border-spacing: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }

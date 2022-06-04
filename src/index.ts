@@ -1,4 +1,4 @@
 import '../sass/style.scss';
 import '../index.html';
 
-console.log('ola mundo!');
+console.log('olá mundo!');

@@ -16,7 +16,7 @@ $color-darken: #333;
 $color-bright: #f0f0f0;
 $color-link: $color-quaternary;
 
-@function toRem( $value ) {
+@function toRem($value) {
 
   $remValue: calc($value / $font-size-base) + rem;
 
@@ -35,7 +35,7 @@ a {
   font-weight: 700;
   text-decoration: none;
 
-  &:hover { color: color.scale($color: $color-link, $lightness: 25%,); }
+  &:hover { color: color.scale($color: $color-link, $lightness: 25%); }
 }
 
 em {
@@ -90,13 +90,11 @@ em {
 .list {
   &-disc {
     list-style-type: disc;
-
     li { padding: 0.25rem 0; }
   }
 
   &-none {
     list-style: none;
-
     li { padding: 1rem 0; }
   }
 
