@@ -6,35 +6,32 @@
 $break-small: 400px;
 $break-medium: 800px;
 $break-large: 1200px;
-$font-size-base: 16;
-$font-family-title: 'Noto Serif', serif;
-$font-family: 'Open Sans', sans-serif;
-$font-mono: 'Roboto Mono', monospace;
-$font-size: $font-size-base + px;
 $color-primary: #293462;
 $color-secondary: #f24c4c;
 $color-tertiary: #f7d716;
 
 body {
   color: #fff;
-  font-family: $font-family;
-  font-size: $font-size;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   line-height: 150%;
+  letter-spacing: 0.1rem;
 }
 
 %title {
   padding: 1rem 0;
   color: $color-primary;
-  font-family: $font-family-title;
-  font-weight: 900;
+  font-family: 'Noto Serif', serif;
+  font-weight: 800;
 }
 
 %link {
   color: $color-tertiary;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 
-  &:hover { color: color.scale($color: $color-tertiary, $lightness: 50%); }
+  &:hover,
+  &:focus { color: color.scale($color: $color-tertiary, $lightness: 50%); }
 }
 
 .c-link { @extend %link; }
@@ -44,7 +41,7 @@ body {
   padding: 4px 8px;
   background: rgba(0, 0, 0, 25%);
   border-radius: 4px;
-  font-family: $font-mono;
+  font-family: 'Roboto Mono', monospace;
 
   &--secondary { background: rgba(0, 0, 0, 10%); }
 }
@@ -93,7 +90,7 @@ body {
     font-size: 1.5rem;
 
     @media screen and (min-width: $break-small) {
-      padding: 1rem 0 1.5rem;
+      padding: 1rem 0;
       font-size: 2rem;
     }
   }
@@ -104,7 +101,7 @@ body {
     @extend %title;
 
     padding-top: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 
     @media screen and (min-width: $break-small) {
       font-size: 1.5rem;
@@ -132,20 +129,20 @@ body {
   &__item {
     padding: 1rem 0;
 
-    .c-list--disc & { padding: 0.25rem 0; }
+    .c-list--disc & { padding: 0.5rem 0; }
     &:first-child { padding-top: 0; }
     &:last-child { padding-bottom: 0; }
   }
 
   .c-list__title {
-    padding: 0.5rem 0;
-    font-size: 1.2rem;
+    padding: 0 0 0.5rem;
+    font-size: 1rem;
     font-weight: 600;
   }
 }
 
 .c-warning {
-  margin: 8px 0;
+  margin: 16px 0;
   padding: 8px;
   background: rgba(0, 0, 0, 10%);
   border-radius: 4px;
