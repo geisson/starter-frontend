@@ -3,6 +3,9 @@
 @import url('reset.scss');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+$break-small: 400px;
+$break-medium: 800px;
+$break-large: 1200px;
 $font-size-base: 16;
 $font-family-title: 'Noto Serif', serif;
 $font-family: 'Open Sans', sans-serif;
@@ -10,40 +13,48 @@ $font-mono: 'Roboto Mono', monospace;
 $font-size: $font-size-base + px;
 $color-primary: #293462;
 $color-secondary: #f24c4c;
-$color-tertiary: #ec9b3b;
-$color-quaternary: #f7d716;
-$color-darken: #333;
-$color-bright: #f0f0f0;
-$color-link: $color-quaternary;
-
-@function toRem($value) {
-
-  $remValue: calc($value / $font-size-base) + rem;
-
-  @return $remValue;
-}
+$color-tertiary: #f7d716;
 
 body {
   color: #fff;
   font-family: $font-family;
   font-size: $font-size;
-  line-height: 1.5rem;
+  line-height: 150%;
 }
 
-a {
-  color: $color-link;
+%title {
+  padding: 1rem 0;
+  color: $color-primary;
+  font-family: $font-family-title;
+  font-weight: 900;
+}
+
+%link {
+  color: $color-tertiary;
   font-weight: 700;
   text-decoration: none;
 
-  &:hover { color: color.scale($color: $color-link, $lightness: 25%); }
+  &:hover { color: color.scale($color: $color-tertiary, $lightness: 50%); }
 }
 
-em {
+.c-link { @extend %link; }
+
+.c-code {
+  display: inline-block;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 25%);
+  border-radius: 4px;
+  font-family: $font-mono;
+
+  &--secondary { background: rgba(0, 0, 0, 10%); }
+}
+
+.c-emphasis {
   font-weight: 600;
   font-style: italic;
 }
 
-.container {
+.c-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -51,80 +62,91 @@ em {
   background: $color-primary;
 }
 
-.content {
-  max-width: 37.5rem;
-  margin: 2.5rem 0;
-  padding: 2.5rem;
+.c-content {
+  max-width: 300px;
+  margin: 32px 16px;
+  padding: 16px;
   background: $color-secondary;
-  border-radius: 0.25rem;
-  box-shadow: 0 0 0 1rem rgba(0, 0, 0, 25%);
+  border-radius: 4px;
+  box-shadow: 0 0 0 16px rgba(0, 0, 0, 25%);
   font-weight: 400;
+
+  @media screen and (min-width: $break-small) {
+    max-width: 600px;
+  }
 }
 
-.divider {
-  margin: 1rem 0;
-  margin-top: 2rem;
-  border: toRem(1) solid $color-primary;
+.c-divider {
+  margin: 16px 0;
+  border: 1px solid $color-primary;
+
+  @media screen and (min-width: $break-small) {
+    margin: 32px 0;
+  }
 }
 
-.title {
-  &,
-  &-2 {
-    padding: 1rem 0;
-    color: $color-primary;
-    font-family: $font-family-title;
-    font-weight: 900;
-  }
+.c-header {
+  &__title {
+    @extend %title;
 
-  &-2 { font-size: 1.5rem; }
+    padding: 0 0 1rem;
+    font-size: 1.5rem;
 
-  &-3 {
-    padding: 0.5rem 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  font-size: 2rem;
-}
-
-.list {
-  &-disc {
-    list-style-type: disc;
-    li { padding: 0.25rem 0; }
-  }
-
-  &-none {
-    list-style: none;
-    li { padding: 1rem 0; }
-  }
-
-  &-none,
-  &-disc {
-    list-style-position: inside;
-
-    li {
-      &:first-child { padding-top: 0; }
-      &:last-child { padding-bottom: 0; }
+    @media screen and (min-width: $break-small) {
+      padding: 1rem 0 1.5rem;
+      font-size: 2rem;
     }
   }
 }
 
-.code {
-  &-primary { background: rgba(0, 0, 0, 25%); }
-  &-secondary { background: rgba(0, 0, 0, 10%); }
+.c-section {
+  &__title {
+    @extend %title;
 
-  &-primary,
-  &-secondary {
-    display: inline-block;
-    padding: toRem(4) toRem(8);
-    border-radius: toRem(4);
-    font-family: $font-mono;
+    padding-top: 0;
+    font-size: 1.2rem;
+
+    @media screen and (min-width: $break-small) {
+      font-size: 1.5rem;
+    }
   }
 }
 
-.warning {
-  margin: 0.5rem 0;
-  padding: 0.5rem;
+.c-footer {
+  &__title {
+    font-style: italic;
+  }
+
+  @media screen and (min-width: $break-small) {
+    padding-bottom: 16px;
+  }
+}
+
+.c-list {
+  list-style-position: inside;
+
+  &--disc {
+    list-style-type: disc;
+  }
+
+  &__item {
+    padding: 1rem 0;
+
+    .c-list--disc & { padding: 0.25rem 0; }
+    &:first-child { padding-top: 0; }
+    &:last-child { padding-bottom: 0; }
+  }
+
+  .c-list__title {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+.c-warning {
+  margin: 8px 0;
+  padding: 8px;
   background: rgba(0, 0, 0, 10%);
-  border-radius: toRem(4);
+  border-radius: 4px;
 }
