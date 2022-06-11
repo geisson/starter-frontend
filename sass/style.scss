@@ -1,7 +1,7 @@
 @use 'sass:color';
 
 @import url('reset.scss');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
 $break-small: 400px;
 $break-medium: 800px;
@@ -12,22 +12,32 @@ $color-tertiary: #f7d716;
 
 body {
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.1rem;
 }
 
+p {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $break-small) {
+    margin-bottom: 16px;
+  }
+}
+
 %title {
-  padding: 1rem 0;
   color: $color-primary;
-  font-family: 'Noto Serif', serif;
-  font-weight: 800;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 700;
 }
 
 %link {
   color: $color-tertiary;
-  font-weight: 600;
   text-decoration: none;
 
   &:hover,
@@ -47,7 +57,7 @@ body {
 }
 
 .c-emphasis {
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
 }
 
@@ -61,24 +71,26 @@ body {
 
 .c-content {
   max-width: 300px;
-  margin: 32px 16px;
-  padding: 16px;
+  margin: 24px;
+  padding: 24px 16px;
   background: $color-secondary;
   border-radius: 4px;
   box-shadow: 0 0 0 16px rgba(0, 0, 0, 25%);
   font-weight: 400;
 
-  @media screen and (min-width: $break-small) {
+  @media (min-width: $break-small) {
     max-width: 600px;
+    margin: 64px;
+    padding: 64px 32px;
   }
 }
 
 .c-divider {
-  margin: 16px 0;
-  border: 1px solid $color-primary;
+  height: 24px;
+  border: none;
 
-  @media screen and (min-width: $break-small) {
-    margin: 32px 0;
+  @media (min-width: $break-small) {
+    height: 64px;
   }
 }
 
@@ -86,12 +98,12 @@ body {
   &__title {
     @extend %title;
 
-    padding: 0 0 1rem;
-    font-size: 1.5rem;
+    margin: 0 0 16px;
+    font-size: 24px;
 
-    @media screen and (min-width: $break-small) {
-      padding: 1rem 0;
-      font-size: 2rem;
+    @media (min-width: $break-small) {
+      margin: 0 0 32px;
+      font-size: 36px;
     }
   }
 }
@@ -100,22 +112,13 @@ body {
   &__title {
     @extend %title;
 
-    padding-top: 0;
-    font-size: 1.5rem;
+    margin-bottom: 16px;
+    font-size: 18px;
 
-    @media screen and (min-width: $break-small) {
-      font-size: 1.5rem;
+    @media (min-width: $break-small) {
+      margin-bottom: 32px;
+      font-size: 24px;
     }
-  }
-}
-
-.c-footer {
-  &__title {
-    font-style: italic;
-  }
-
-  @media screen and (min-width: $break-small) {
-    padding-bottom: 16px;
   }
 }
 
@@ -127,17 +130,27 @@ body {
   }
 
   &__item {
-    padding: 1rem 0;
+    padding: 8px 0;
 
-    .c-list--disc & { padding: 0.5rem 0; }
+    .c-list--disc & { padding: 4px 0; }
     &:first-child { padding-top: 0; }
     &:last-child { padding-bottom: 0; }
+
+    @media (min-width: $break-small) {
+      padding: 16px 0;
+
+      .c-list--disc & { padding: 8px 0; }
+    }
   }
 
   .c-list__title {
-    padding: 0 0 0.5rem;
-    font-size: 1rem;
-    font-weight: 600;
+    margin: 0 0 4px;
+    font-size: 16px;
+    font-weight: 700;
+
+    @media (min-width: $break-small) {
+      margin: 0 0 8px;
+    }
   }
 }
 
@@ -146,4 +159,22 @@ body {
   padding: 8px;
   background: rgba(0, 0, 0, 10%);
   border-radius: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $break-small) {
+    margin: 32px 0;
+    padding: 16px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-weight: 700;
+
+    @media (min-width: $break-small) {
+      margin-bottom: 8px;
+    }
+  }
 }

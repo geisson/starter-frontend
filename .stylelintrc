@@ -597,11 +597,13 @@
 
     "plugin/declaration-block-no-ignored-properties": true,
     "plugin/stylelint-group-selectors": true,
+
     "plugin/8-point-grid": {
       "base": 4,
       "allowlist": ["2px", "1px", "0.0625rem"],
       "ignorelist": []
     },
+
     "a11y/content-property-no-static-value": true,
     "a11y/font-size-is-readable": true,
     "a11y/line-height-is-vertical-rhythmed": true,
@@ -616,27 +618,24 @@
     "a11y/selector-pseudo-class-focus": true,
 
     "scales/alpha-values": [10, 25, 50, 75, 90],
-
     "scales/border-widths": [{ "scale": [1, 2, 4, 8], "units": ["px"] }],
     "scales/font-families": [
-      "Noto Serif",
-      "Open Sans",
+      "Roboto",
+      "Roboto Slab",
       "Roboto Mono",
       "sans-serif",
-      "serif",
       "monospace"
     ],
     "scales/font-sizes": [
       { "scale": [1, 1.5, 2, 2.5, 3], "units": ["em", "rem"] },
-      { "scale": [8, 16, 24, 32], "units": ["px"] }
+      { "scale": [16, 18, 24, 36], "units": ["px"] }
     ],
-    "scales/font-weights": [400, 600, 800],
+    "scales/font-weights": [400, 700],
     "scales/line-heights": [1, 1.5],
     "scales/radii": [{ "scale": [2, 4, 8, 16], "units": ["px"] }],
-    "scales/sizes": null,
     "scales/space": [
       { "scale": [0.5, 1, 2], "units": ["em", "rem"] },
-      { "scale": [2, 4, 8, 16, 32], "units": ["px"] }
+      { "scale": [4, 8, 16, 24, 32, 64], "units": ["px"] }
     ],
     "scales/word-spacings": [
       {
