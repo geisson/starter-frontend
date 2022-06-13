@@ -10,7 +10,8 @@
     "stylelint-group-selectors",
     "stylelint-a11y",
     "@signal-noise/stylelint-scales",
-    "stylelint-use-nesting"
+    "stylelint-use-nesting",
+    "stylelint-color-format"
   ],
   "defaultSeverity": "warning",
   "rules": {
@@ -598,6 +599,12 @@
     "plugin/declaration-block-no-ignored-properties": true,
     "plugin/stylelint-group-selectors": true,
 
+    "csstools/use-nesting": "always",
+
+    "color-format/format": {
+      "format": "rgb"
+    },
+
     "plugin/8-point-grid": {
       "base": 4,
       "allowlist": ["2px", "1px", "0.0625rem"],
@@ -643,8 +650,6 @@
         "units": ["rem"]
       }
     ],
-    "scales/z-indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-
-    "csstools/use-nesting": "always"
+    "scales/z-indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   }
 }

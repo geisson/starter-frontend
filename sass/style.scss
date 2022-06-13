@@ -59,12 +59,12 @@
 $break-small: 400px;
 $break-medium: 800px;
 $break-large: 1200px;
-$color-primary: #293462;
-$color-secondary: #f24c4c;
-$color-tertiary: #f7d716;
+$color-primary: rgb(41, 52, 98);
+$color-secondary: rgb(242, 76, 76);
+$color-tertiary: rgb(247, 215, 22);
 
 body {
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-family: Roboto, sans-serif;
   font-size: 16px;
   line-height: 150%;
