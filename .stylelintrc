@@ -9,7 +9,6 @@
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-group-selectors",
     "stylelint-a11y",
-    "@signal-noise/stylelint-scales",
     "stylelint-use-nesting",
     "stylelint-color-format"
   ],
@@ -622,34 +621,6 @@
     "a11y/no-spread-text": true,
     "a11y/no-outline-none": true,
     "a11y/no-text-align-justify": true,
-    "a11y/selector-pseudo-class-focus": true,
-
-    "scales/alpha-values": [10, 25, 50, 75, 90],
-    "scales/border-widths": [{ "scale": [1, 2, 4, 8], "units": ["px"] }],
-    "scales/font-families": [
-      "Roboto",
-      "Roboto Slab",
-      "Roboto Mono",
-      "sans-serif",
-      "monospace"
-    ],
-    "scales/font-sizes": [
-      { "scale": [1, 1.5, 2, 2.5, 3], "units": ["em", "rem"] },
-      { "scale": [16, 18, 24, 36], "units": ["px"] }
-    ],
-    "scales/font-weights": [400, 700],
-    "scales/line-heights": [1, 1.5],
-    "scales/radii": [{ "scale": [2, 4, 8, 16], "units": ["px"] }],
-    "scales/space": [
-      { "scale": [0.5, 1, 2], "units": ["em", "rem"] },
-      { "scale": [4, 8, 16, 24, 32, 64], "units": ["px"] }
-    ],
-    "scales/word-spacings": [
-      {
-        "scale": [-0.1, 0.2],
-        "units": ["rem"]
-      }
-    ],
-    "scales/z-indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    "a11y/selector-pseudo-class-focus": true
   }
 }
